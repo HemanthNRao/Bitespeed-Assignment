@@ -1,0 +1,51 @@
+classes
+
+Entity class
+Contact
+    id: int
+    phoneNumber: String
+    email: String
+    linkerId: int
+    linkPrecedence: ENUM
+    createdAt: DateTime
+    updatedAt: DateTime
+    deletedAt: DateTime
+
+Order
+    phoneNumber: String
+    email: String
+
+Requirements
+1. Check any record with same phone number
+2. Check any record with same email
+    Check given phone and email exists in same record
+3. if null then add as new entry with and make it as primary contact
+4. if record with same phone number or email
+   then take primary record and add new entry
+   as secondary(Check for last condition)
+5. In response add all primary and secondary
+   old records and return response
+6. if it has common from 2 different primary contact then make recent order as secondary
+
+Methods
+1. Check any record with same phone number or email
+2. if none then add order as primary
+3. if it contains commons from 2 different primary orders
+   then we can make recent one as secondary
+4. else attach primary contact and prepare response and also add entry in DB
+5. return response
+
+Methods
+getMatchingRecord:
+    query DB where email or phone number is matching and return list of objects
+
+findListOfPrimaryContacts
+    return list of primary type orders
+
+insertOrder
+    save record to DB
+
+PrepareEmailResponseList
+PreparePhoneNumberResponseList
+
+
