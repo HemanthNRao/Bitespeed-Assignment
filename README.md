@@ -3,7 +3,8 @@
 <b> Instructions to run this application </b>
 <ul>
 <li> In project root directory run below commands </li>
-<li> Build a docker image from Dockerfile <code>sudo docker build -t bitespeed-assignment -f docker/Dockerfile .</code></li>
+<li> Build the maven project first. Required java 8 or above, and also maven tool <br/>Command: <code>mvn clean install</code></li>
+<li> Build a docker image from Dockerfile <code>sudo docker build -t bitespeed-assignment -f Dockerfile .</code></li>
 <li> Run the docker image <code> sudo docker run --rm -p 8080:8080 --name bitespeed bitespeed-assignment</code></li>
 </ul>
 <br/>
